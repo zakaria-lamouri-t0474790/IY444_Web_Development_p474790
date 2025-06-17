@@ -1,33 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a205121-73d9-4804-99d6-5d3360ef3aa4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="1a205121-73d9-4804-99d6-5d3360ef3aa4" name="Changes" comment="version 0.4(working on the third page )">
+      <change afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/videos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "zakaria-lamouri-t0474790"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zakaria-lamouri-t0474790&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/zakaria-lamouri-t0474790/IY444_Web_Development_p474790.git",
-    "accountId": "a1c6eeab-33bd-4cec-8740-881ce1faf6df"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/zakaria-lamouri-t0474790/IY444_Web_Development_p474790.git&quot;,
+    &quot;accountId&quot;: &quot;a1c6eeab-33bd-4cec-8740-881ce1faf6df&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2xPnt47N6uKi83xy5NDALrRCsNC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,18 +53,46 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.IY444_p474790.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.main.html.executor": "Run",
+    "JavaScript Debug.recipes.html.executor": "Run",
+    "JavaScript Debug.videos.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/Lamou/AppData/Roaming/JetBrains/WebStorm2025.1/node/versions/22.16.0/node",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lamou\WebstormProjects\IY444_Web_Development_p474790" />
+      <recent name="C:\Users\Lamou\WebstormProjects\IY444_Web_Development_p474790\.idea" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/IY444_Web_Development_p474790/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="recipes.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/IY444_Web_Development_p474790/recipes.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.recipes.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -61,11 +107,82 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747848788314</updated>
-      <workItem from="1747848789403" duration="400000" />
+      <workItem from="1747848789403" duration="1903000" />
+      <workItem from="1747902836251" duration="608000" />
+      <workItem from="1748536784651" duration="4646000" />
+      <workItem from="1749027932119" duration="51000" />
+      <workItem from="1749318450593" duration="2511000" />
+      <workItem from="1749465074665" duration="21000" />
+      <workItem from="1749923010789" duration="981000" />
+      <workItem from="1749927630577" duration="14604000" />
+      <workItem from="1750027688224" duration="98000" />
+      <workItem from="1750104733618" duration="352000" />
+      <workItem from="1750117631568" duration="91000" />
+      <workItem from="1750164654128" duration="517000" />
+      <workItem from="1750197204456" duration="676000" />
+      <workItem from="1750198033538" duration="118000" />
+      <workItem from="1750198333193" duration="2651000" />
     </task>
+    <task id="LOCAL-00001" summary="version 0.1">
+      <option name="closed" value="true" />
+      <created>1747849220361</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747849220362</updated>
+    </task>
+    <task id="LOCAL-00002" summary="version 0.1">
+      <option name="closed" value="true" />
+      <created>1747849226958</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747849226958</updated>
+    </task>
+    <task id="LOCAL-00003" summary="version 0.2">
+      <option name="closed" value="true" />
+      <created>1747849293419</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747849293419</updated>
+    </task>
+    <task id="LOCAL-00004" summary="version 0.3(add the first page home page)">
+      <option name="closed" value="true" />
+      <created>1749950541206</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749950541206</updated>
+    </task>
+    <task id="LOCAL-00005" summary="version 0.4(add the second page recipes)">
+      <option name="closed" value="true" />
+      <created>1750027768672</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750027768672</updated>
+    </task>
+    <task id="LOCAL-00006" summary="version 0.4(working on the third page )">
+      <option name="closed" value="true" />
+      <created>1750197826537</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750197826537</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version 0.1" />
+    <MESSAGE value="version 0.2" />
+    <MESSAGE value="version 0.3(add the first page home page)" />
+    <MESSAGE value="version 0.4(add the second page recipes)" />
+    <MESSAGE value="version 0.4(working on the third page )" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 0.4(working on the third page )" />
   </component>
 </project>
