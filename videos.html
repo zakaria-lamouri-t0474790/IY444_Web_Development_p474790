@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cooking Videos - Cooking with Zakaria</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+
+    header {
+      background-color: #ffa500;
+      padding: 1em;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #e67300;
+      border-radius: 5px;
+    }
+
+
+    main {
+      padding: 2em;
+    }
+
+
+    .video-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-card {
+      background-color: #fff8dc;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+      max-width: 100%;
+    }
+
+    .video-card video {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>Cooking with Zakaria</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="videos.html" class="active">Videos</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Watch Our Cooking Videos</h2>
+  <section class="video-gallery">
+    <article class="video-card">
+      <h3>How to Make Algerien tacos</h3>
+      <video controls width="100%">
+        <source src="videos/spaghetti.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </article>
+
+    <article class="video-card">
+      <h3>Easy Chicken Alfredo</h3>
+      <video controls width="100%">
+        <source src="videos/chicken-curry.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </article>
+
+    <article class="video-card">
+      <h3>Burger in 5 Minutes</h3>
+      <video controls width="100%">
+        <source src="videos/salad.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </article>
+
+    <article class="video-card">
+      <h3>Grilled lamb chops served with Semolina-based sauce</h3>
+      <video controls width="100%">
+        <source src="videos/spaghetti.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </article>
+
+    <article class="video-card">
+      <h3>How to Make Spaghetti</h3>
+      <video controls width="100%">
+        <source src="videos/spaghetti.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </article>
+
+    <article class="video-card">
+      <h3>Algerien kesra in 5 min</h3>
+      <video controls width="100%">
+        <source src="videos/spaghetti.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Cooking with Zakaria. All rights reserved.</p>
+</footer>
+</body>
+</html>
