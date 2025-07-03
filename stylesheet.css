@@ -69,4 +69,188 @@ footer {
     margin-top: 30px;
 }
 
+/*page01*/
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.features article {
+    background-color: #FFF3E0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+button {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF8C00;
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    max-width: 600px;
+    margin: 40px auto 20px;
+    text-align: center;
+}
+
+/*seconde page*/
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.recipe-card {
+    background-color: #FFF8E1;
+    border: 2px solid #FFA500;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.recipe-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.recipe-card h3 {
+    color: #5D4037;
+    margin: 5px 0;
+}
+
+
+.recipe-card p {
+    color: #333333;
+    font-size: 14px;
+    margin: 0;
+}
+/*third page*/
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.video-card {
+    background-color: #FFF8E1;
+    border: 2px solid #FFA500;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.video-card h3 {
+    color: #5D4037;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+.video-card video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/*six th page */
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF8E1;
+    border: 2px solid #FFA500;
+    border-radius: 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+
+.contact-form h2 {
+    color: #5D4037;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+.contact-form button {
+    background-color: #FFA500;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+.contact-form button:hover {
+    background-color: #E59400;
+}
+
+
+
 
