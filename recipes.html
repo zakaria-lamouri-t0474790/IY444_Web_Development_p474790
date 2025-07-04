@@ -1,11 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Our Recipes - Cooking with Zakaria</title>
   <link rel="stylesheet" href="stylesheet.css" />
+  <style>
 
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2 {
+      text-align: center;
+      color: #5d4037;
+      margin-bottom: 10px;
+    }
+    p.intro {
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 40px;
+    }
+    .recipe-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .recipe-card {
+      background-color: #fff3e0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+    .recipe-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+    .recipe-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .recipe-card h3 {
+      margin: 15px 0 10px;
+      color: #d35400;
+    }
+    .recipe-card p {
+      padding: 0 15px 20px;
+      color: #555;
+      font-size: 16px;
+    }
+    .view-recipe-btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      background-color: #ff9800;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .view-recipe-btn:hover {
+      background-color: #e67e22;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,8 +85,8 @@
       <li><a href="videos.html">Videos</a></li>
       <li><a href="tips.html">Tips</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
       <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -43,7 +110,7 @@
       <img src="recipe photo2.jpeg" alt="Chicken Alfredo" />
       <h3>Chicken Alfredo</h3>
       <p>Creamy pasta with grilled chicken and parmesan cheese.</p>
-      <a href="chicken-alfredo.html" class="view-recipe-btn">View Recipe</a>
+      <a href="Version2-recipes5vd.mp4" class="view-recipe-btn">View Recipe</a>
     </article>
 
     <article class="recipe-card" tabindex="0" aria-label="Burger Recipe">
@@ -64,7 +131,7 @@
       <img src="recipe photo4.jpeg" alt="Algerian Kesra" />
       <h3>Algerian Kesra</h3>
       <p>Traditional Algerian flatbread, perfect with stews or tea.</p>
-      <a href="algerian-kesra.html" class="view-recipe-btn">View Recipe</a>
+      <a href="Version2-Recipes2vd.mp4" class="view-recipe-btn">View Recipe</a>
     </article>
 
     <article class="recipe-card" tabindex="0" aria-label="Rice with Fish Recipe">
