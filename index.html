@@ -1,151 +1,87 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Our Recipes - Cooking with Zakaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | My Cooking Website</title>
     <link rel="stylesheet" href="stylesheet.css" />
-    <style>
-        /* Inline CSS for demo, you can move this to your stylesheet */
-        main {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h2 {
-            text-align: center;
-            color: #5d4037;
-            margin-bottom: 10px;
-        }
-        p.intro {
-            text-align: center;
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 40px;
-        }
-        .recipe-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            justify-content: center;
-        }
-        .recipe-card {
-            background-color: #fff3e0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 280px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-align: center;
-        }
-        .recipe-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
-        }
-        .recipe-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-        .recipe-card h3 {
-            margin: 15px 0 10px;
-            color: #d35400;
-        }
-        .recipe-card p {
-            padding: 0 15px 20px;
-            color: #555;
-            font-size: 16px;
-        }
-        .view-recipe-btn {
-            display: inline-block;
-            margin-bottom: 15px;
-            background-color: #ff9800;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        .view-recipe-btn:hover {
-            background-color: #e67e22;
-        }
-    </style>
 </head>
 <body>
 
 <header>
-    <h1>Cooking with Zakaria</h1>
+    <h1>Welcome to My Cooking Website</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html" class="active">Recipes</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
             <li><a href="videos.html">Videos</a></li>
             <li><a href="tips.html">Tips</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <h2>Delicious Recipes</h2>
-    <p class="intro">
-        Dive into our collection of tasty recipes! Each dish is carefully selected to bring you authentic flavors with simple steps. Click on a recipe to learn more.
-    </p>
+    <section class="intro">
+        <h2>Start Your Cooking Journey Today!</h2>
+        <p>
+            Explore delicious recipes, step-by-step video tutorials, and handy tips to master your kitchen skills.
+        </p>
+        <img src="Iy44_banner.png" alt="Cooking Banner" class="banner" />
+    </section>
 
-    <section class="recipe-list">
+    <section class="about">
+        <p>
+            Whether you're a beginner or an experienced cook, our website offers something for everyone.
+            Discover traditional Algerian dishes alongside international favorites.
+        </p>
+        <p>
+            Learn essential cooking techniques, ingredient substitutions, and meal planning ideas that will help
+            you become more confident and creative in the kitchen.
+        </p>
+        <p>
+            Don't forget to check out our interactive quiz page to test your cooking knowledge and learn new facts!
+        </p>
+    </section>
 
-        <article class="recipe-card" tabindex="0" aria-label="Algerien Tacos Recipe">
-            <img src="recipe photo6.jpeg" alt="Algerien Tacos" />
-            <h3>Algerien Tacos</h3>
-            <p>A fusion street food favorite, packed with flavor and easy to make.</p>
-            <a href="algerien-tacos.html" class="view-recipe-btn" aria-describedby="desc-algerien-tacos">View Recipe</a>
+    <section class="features">
+        <article>
+            <h3>Delicious Recipes</h3>
+            <p>From Algerian classics to global favorites, find easy-to-follow recipes for every occasion.</p>
         </article>
-
-        <article class="recipe-card" tabindex="0" aria-label="Chicken Alfredo Recipe">
-            <img src="recipe photo2.jpeg" alt="Chicken Alfredo" />
-            <h3>Chicken Alfredo</h3>
-            <p>Creamy pasta with grilled chicken and parmesan cheese.</p>
-            <a href="chicken-alfredo.html" class="view-recipe-btn">View Recipe</a>
+        <article>
+            <h3>Step-by-Step Videos</h3>
+            <p>Watch our chefs prepare mouth-watering dishes, guiding you through each step visually.</p>
         </article>
-
-        <article class="recipe-card" tabindex="0" aria-label="Burger Recipe">
-            <img src="recipe photo1.jpeg" alt="Burger" />
-            <h3>Burger</h3>
-            <p>Juicy grilled burger loaded with fresh toppings and sauce.</p>
-            <a href="burger.html" class="view-recipe-btn">View Recipe</a>
+        <article>
+            <h3>Cooking Tips & Tricks</h3>
+            <p>Discover insider tips on ingredient selection, preparation, and presentation to impress every time.</p>
         </article>
+    </section>
 
-        <article class="recipe-card" tabindex="0" aria-label="Grilled Lamb Chops Recipe">
-            <img src="recipe photo3.jpeg" alt="Grilled Lamb Chops" />
-            <h3>Grilled Lamb Chops</h3>
-            <p>Succulent lamb chops served with a rich semolina-based sauce.</p>
-            <a href="grilled-lamb-chops.html" class="view-recipe-btn">View Recipe</a>
-        </article>
+    <section class="cta">
+        <button onclick="window.location.href='recipes.html'">Explore Recipes</button>
+        <blockquote>
+            "Cooking is like love. It should be entered into with abandon or not at all." – Harriet Van Horne
+        </blockquote>
+    </section>
 
-        <article class="recipe-card" tabindex="0" aria-label="Algerian Kesra Recipe">
-            <img src="recipe photo4.jpeg" alt="Algerian Kesra" />
-            <h3>Algerian Kesra</h3>
-            <p>Traditional Algerian flatbread, perfect with stews or tea.</p>
-            <a href="algerian-kesra.html" class="view-recipe-btn">View Recipe</a>
-        </article>
-
-        <article class="recipe-card" tabindex="0" aria-label="Rice with Fish Recipe">
-            <img src="recipe photo5.jpeg" alt="Rice with Fish" />
-            <h3>Rice with Fish</h3>
-            <p>Fluffy rice paired with spiced grilled fish for a perfect meal.</p>
-            <a href="rice-with-fish.html" class="view-recipe-btn">View Recipe</a>
-        </article>
-
+    <section class="gallery">
+        <h3>Gallery: Some of Our Favorite Dishes</h3>
+        <p>Here are some handpicked meals to inspire your next cooking adventure!</p>
+        <div class="image-grid">
+            <img src="i1.jpeg" alt="Dish 1" />
+            <img src="i2.jpeg" alt="Dish 2" />
+            <img src="i3.jpeg" alt="Dish 3" />
+            <img src="i4.jpeg" alt="Dish 4" />
+        </div>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Cooking with Zakaria. All rights reserved.</p>
+    <p>&copy; 2025 My Cooking Website | All rights reserved</p>
 </footer>
 
 </body>
