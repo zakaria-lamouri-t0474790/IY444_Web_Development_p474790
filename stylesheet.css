@@ -1,3 +1,4 @@
+/*w3school(n.d*).general layout*/
 :root {
     --carrot-orange: #e67e22;
     --basil-green: #27ae60;
@@ -152,7 +153,7 @@ footer {
     margin-top: 40px;
 }
 /*2 nd page*/
-
+/*w3school(n.d*).css grid layout module*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -285,6 +286,7 @@ footer {
     margin-top: 40px;
 }
 /*3 page*/
+/*w3school(n.d*).how to-video gallery*/
 .video-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -328,7 +330,7 @@ nav a.active {
 }
 
 /*4th page*/
-
+/*w3school(n.d*).how to-cards*/
 * {
     margin: 0;
     padding: 0;
@@ -437,7 +439,7 @@ footer {
 }
 
 /*5th pge*/
-
+/*w3school(n.d*).how to-profile cards*/
 .about-content{
     max-width: 900px;
     margin: 40px auto;
