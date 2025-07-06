@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a205121-73d9-4804-99d6-5d3360ef3aa4" name="Changes" comment="version 1.7 editing on the quiz page">
+    <list default="true" id="1a205121-73d9-4804-99d6-5d3360ef3aa4" name="Changes" comment="version 1.8 editing on the web site">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +85,7 @@
       <recent name="C:\Users\Lamou\WebstormProjects\IY444_Web_Development_p474790\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+  <component name="RunManager">
     <configuration name="about.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/IY444_Web_Development_p474790_version2/about.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -146,7 +145,7 @@
       <workItem from="1751644148306" duration="101000" />
       <workItem from="1751670689779" duration="1333000" />
       <workItem from="1751723938214" duration="3161000" />
-      <workItem from="1751816047675" duration="1122000" />
+      <workItem from="1751816047675" duration="3903000" />
     </task>
     <task id="LOCAL-00001" summary="version 0.1">
       <option name="closed" value="true" />
@@ -292,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751816091990</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="version 1.8 editing on the web site">
+      <option name="closed" value="true" />
+      <created>1751826680031</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1751826680031</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +333,7 @@
     <MESSAGE value="version 1.5 editing on the 5th page" />
     <MESSAGE value="version 1.6 editing on the 1st page" />
     <MESSAGE value="version 1.7 editing on the quiz page" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.7 editing on the quiz page" />
+    <MESSAGE value="version 1.8 editing on the web site" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1.8 editing on the web site" />
   </component>
 </project>
