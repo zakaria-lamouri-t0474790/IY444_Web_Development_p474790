@@ -1,152 +1,129 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Recipes - Cooking with Zakaria</title>
-  <link rel="stylesheet" href="stylesheet.css" />
-  <style>
-
-    main {
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    h2 {
-      text-align: center;
-      color: #5d4037;
-      margin-bottom: 10px;
-    }
-    p.intro {
-      text-align: center;
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 40px;
-    }
-    .recipe-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      justify-content: center;
-    }
-    .recipe-card {
-      background-color: #fff3e0;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 280px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      text-align: center;
-    }
-    .recipe-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
-    }
-    .recipe-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .recipe-card h3 {
-      margin: 15px 0 10px;
-      color: #d35400;
-    }
-    .recipe-card p {
-      padding: 0 15px 20px;
-      color: #555;
-      font-size: 16px;
-    }
-    .view-recipe-btn {
-      display: inline-block;
-      margin-bottom: 15px;
-      background-color: #ff9800;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .view-recipe-btn:hover {
-      background-color: #e67e22;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes | Cooking with Zakaria</title>
+    <link rel="stylesheet" href="stylesheet.css" />
 </head>
 <body>
 
 <header>
-  <h1>Cooking with Zakaria</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="recipes.html" class="active">Recipes</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="tips.html">Tips</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <h1>Cooking with Zakaria</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html" class="active">Recipes</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
-  <h2>Delicious Recipes</h2>
-  <p class="intro">
-    Dive into our collection of tasty recipes! Each dish is carefully selected to bring you authentic flavors with simple steps. Click on a recipe to learn more.
-  </p>
+    <h2>Delicious Recipes</h2>
+    <p style="text-align:center; color:#555; margin-bottom:36px; font-size:1.05rem;">
+        Dive into our collection of tasty recipes! Click <em>View Recipe</em> to watch the video right here.
+    </p>
 
-  <section class="recipe-list">
+    <section class="recipe-list">
 
-    <article class="recipe-card" tabindex="0" aria-label="Algerien Tacos Recipe">
-      <img src="recipe photo6.jpeg" alt="Algerien Tacos" />
-      <h3>Algerien Tacos</h3>
-      <p>A fusion street food favorite, packed with flavor and easy to make.</p>
-      <a href="recipes3vd.mp4" class="view-recipe-btn" aria-describedby="desc-algerien-tacos">View Recipe</a>
-    </article>
+        <article class="recipe-card">
+            <img src="recipe photo6.jpeg" alt="Algerian Tacos" />
+            <h3>Algerian Tacos</h3>
+            <p>A fusion street food favourite, packed with flavour and easy to make.</p>
+            <button class="view-recipe-btn" onclick="openRecipeModal('Algerian Tacos', 'recipes3vd.mp4', 'recipe photo6.jpeg')">View Recipe</button>
+        </article>
 
-    <article class="recipe-card" tabindex="0" aria-label="Chicken Alfredo Recipe">
-      <img src="recipe photo2.jpeg" alt="Chicken Alfredo" />
-      <h3>Chicken Alfredo</h3>
-      <p>Creamy pasta with grilled chicken and parmesan cheese.</p>
-      <a href="Version2-recipes5vd.mp4" class="view-recipe-btn">View Recipe</a>
-    </article>
+        <article class="recipe-card">
+            <img src="recipe photo2.jpeg" alt="Chicken Alfredo" />
+            <h3>Chicken Alfredo</h3>
+            <p>Creamy pasta with grilled chicken and parmesan cheese.</p>
+            <button class="view-recipe-btn" onclick="openRecipeModal('Chicken Alfredo', 'Version2-recipes5vd.mp4', 'recipe photo2.jpeg')">View Recipe</button>
+        </article>
 
-    <article class="recipe-card" tabindex="0" aria-label="Burger Recipe">
-      <img src="recipe photo1.jpeg" alt="Burger" />
-      <h3>Burger</h3>
-      <p>Juicy grilled burger loaded with fresh toppings and sauce.</p>
-      <a href="recipes6vd.mp4" class="view-recipe-btn">View Recipe</a>
-    </article>
+        <article class="recipe-card">
+            <img src="recipe photo1.jpeg" alt="Burger" />
+            <h3>Burger</h3>
+            <p>Juicy grilled burger loaded with fresh toppings and sauce.</p>
+            <button class="view-recipe-btn" onclick="openRecipeModal('Burger', 'recipes6vd.mp4', 'recipe photo1.jpeg')">View Recipe</button>
+        </article>
 
-    <article class="recipe-card" tabindex="0" aria-label="Grilled Lamb Chops Recipe">
-      <img src="recipe photo3.jpeg" alt="Grilled Lamb Chops" />
-      <h3>Grilled Lamb Chops</h3>
-      <p>Succulent lamb chops served with a rich semolina-based sauce.</p>
-      <a href="recipes4vd.mp4" class="view-recipe-btn">View Recipe</a>
-    </article>
+        <article class="recipe-card">
+            <img src="recipe photo3.jpeg" alt="Grilled Lamb Chops" />
+            <h3>Grilled Lamb Chops</h3>
+            <p>Succulent lamb chops served with a rich semolina-based sauce.</p>
+            <button class="view-recipe-btn" onclick="openRecipeModal('Grilled Lamb Chops', 'recipes4vd.mp4', 'recipe photo3.jpeg')">View Recipe</button>
+        </article>
 
-    <article class="recipe-card" tabindex="0" aria-label="Algerian Kesra Recipe">
-      <img src="recipe photo4.jpeg" alt="Algerian Kesra" />
-      <h3>Algerian Kesra</h3>
-      <p>Traditional Algerian flatbread, perfect with stews or tea.</p>
-      <a href="Version2-Recipes2vd.mp4" class="view-recipe-btn">View Recipe</a>
-    </article>
+        <article class="recipe-card">
+            <img src="recipe photo4.jpeg" alt="Algerian Kesra" />
+            <h3>Algerian Kesra</h3>
+            <p>Traditional Algerian flatbread, perfect with stews or tea.</p>
+            <button class="view-recipe-btn" onclick="openRecipeModal('Algerian Kesra', 'Version2-Recipes2vd.mp4', 'recipe photo4.jpeg')">View Recipe</button>
+        </article>
 
-    <article class="recipe-card" tabindex="0" aria-label="Rice with Fish Recipe">
-      <img src="recipe photo5.jpeg" alt="Rice with Fish" />
-      <h3>Rice with Fish</h3>
-      <p>Fluffy rice paired with spiced grilled fish for a perfect meal.</p>
-      <a href="recipes1vd.mp4" class="view-recipe-btn">View Recipe</a>
-    </article>
+        <article class="recipe-card">
+            <img src="recipe photo5.jpeg" alt="Rice with Fish" />
+            <h3>Rice with Fish</h3>
+            <p>Fluffy rice paired with spiced grilled fish for a perfect meal.</p>
+            <button class="view-recipe-btn" onclick="openRecipeModal('Rice with Fish', 'recipes1vd.mp4', 'recipe photo5.jpeg')">View Recipe</button>
+        </article>
 
-  </section>
+    </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 Cooking with Zakaria. All rights reserved.</p>
+    <p>&copy; 2025 Cooking with Zakaria. All rights reserved.</p>
 </footer>
+
+<!-- Recipe Video Modal -->
+<div class="recipe-modal-overlay" id="recipeModalOverlay" onclick="closeRecipeModal(event)">
+    <div class="recipe-modal" id="recipeModal">
+        <button class="modal-close" onclick="closeRecipeModalDirect()" aria-label="Close">&times;</button>
+        <h3 id="modalTitle" style="color:#4e342e; font-size:1.3rem; padding-right:40px;"></h3>
+        <video id="modalVideo" controls poster="">
+            <source id="modalSource" src="" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <p style="margin-top:12px; text-align:center;">
+            <a href="videos.html" style="color:#e67e22; font-weight:600;">Browse all videos →</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    function openRecipeModal(title, videoSrc, posterSrc) {
+        document.getElementById('modalTitle').textContent = title;
+        const video = document.getElementById('modalVideo');
+        document.getElementById('modalSource').src = videoSrc;
+        video.poster = posterSrc;
+        video.load();
+        document.getElementById('recipeModalOverlay').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeRecipeModal(e) {
+        if (e.target === document.getElementById('recipeModalOverlay')) {
+            closeRecipeModalDirect();
+        }
+    }
+
+    function closeRecipeModalDirect() {
+        const overlay = document.getElementById('recipeModalOverlay');
+        const video = document.getElementById('modalVideo');
+        video.pause();
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeRecipeModalDirect();
+    });
+</script>
 
 </body>
 </html>
