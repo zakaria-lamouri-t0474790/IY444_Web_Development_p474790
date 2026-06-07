@@ -2,44 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cooking Quiz | My Cooking Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking Quiz | Cooking with Zakaria</title>
     <link rel="stylesheet" href="stylesheet.css" />
-    <style>
-        .quiz-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: #FFF3E0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
-        .question {
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        button {
-            background-color: #FFA500;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #FF8C00;
-        }
-    </style>
 </head>
 <body>
 
 <header>
-    <h1>Cooking Quiz</h1>
+    <h1>Cooking with Zakaria</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -47,7 +17,7 @@
             <li><a href="videos.html">Videos</a></li>
             <li><a href="tips.html">Tips</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="quiz.html" class="active">Quiz</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -55,57 +25,152 @@
 
 <main>
     <div class="quiz-container">
-        <div class="question">
-            <p>1. What is the key ingredient to marinate Algerian Tacos?</p>
-            <input type="radio" name="q1" value="a"> Yogurt and spices<br>
-            <input type="radio" name="q1" value="b"> Tomato sauce<br>
-            <input type="radio" name="q1" value="c"> Lemon juice only<br>
+        <h2>🍳 Cooking Knowledge Quiz</h2>
+
+        <!-- Q1 -->
+        <div class="question" id="q1-block">
+            <p>1. What is the key ingredient used to marinate Algerian Tacos?</p>
+            <label><input type="radio" name="q1" value="a" /> Yogurt and spices</label>
+            <label><input type="radio" name="q1" value="b" /> Tomato sauce</label>
+            <label><input type="radio" name="q1" value="c" /> Lemon juice only</label>
+            <div class="answer-feedback" id="fb1"></div>
         </div>
 
-        <div class="question">
+        <!-- Q2 -->
+        <div class="question" id="q2-block">
             <p>2. How is Chicken Alfredo sauce typically made?</p>
-            <input type="radio" name="q2" value="a"> Butter, cream, and Parmesan cheese<br>
-            <input type="radio" name="q2" value="b"> Tomato and basil<br>
-            <input type="radio" name="q2" value="c"> Olive oil and garlic only<br>
+            <label><input type="radio" name="q2" value="a" /> Butter, cream, and Parmesan cheese</label>
+            <label><input type="radio" name="q2" value="b" /> Tomato and basil</label>
+            <label><input type="radio" name="q2" value="c" /> Olive oil and garlic only</label>
+            <div class="answer-feedback" id="fb2"></div>
         </div>
 
-        <div class="question">
+        <!-- Q3 -->
+        <div class="question" id="q3-block">
             <p>3. What flour is traditionally used to make Algerian Kesra bread?</p>
-            <input type="radio" name="q3" value="a"> Semolina flour<br>
-            <input type="radio" name="q3" value="b"> Rice flour<br>
-            <input type="radio" name="q3" value="c"> Wheat flour<br>
+            <label><input type="radio" name="q3" value="a" /> Semolina flour</label>
+            <label><input type="radio" name="q3" value="b" /> Rice flour</label>
+            <label><input type="radio" name="q3" value="c" /> Wheat flour</label>
+            <div class="answer-feedback" id="fb3"></div>
         </div>
 
-        <button onclick="submitQuiz()">Submit</button>
+        <!-- Q4 (new) -->
+        <div class="question" id="q4-block">
+            <p>4. What is the correct internal temperature for a fully cooked chicken?</p>
+            <label><input type="radio" name="q4" value="a" /> 75°C (165°F)</label>
+            <label><input type="radio" name="q4" value="b" /> 60°C (140°F)</label>
+            <label><input type="radio" name="q4" value="c" /> 90°C (194°F)</label>
+            <div class="answer-feedback" id="fb4"></div>
+        </div>
+
+        <!-- Q5 (new) -->
+        <div class="question" id="q5-block">
+            <p>5. Which cooking method uses dry heat and is best for making crispy food?</p>
+            <label><input type="radio" name="q5" value="a" /> Baking / roasting</label>
+            <label><input type="radio" name="q5" value="b" /> Poaching</label>
+            <label><input type="radio" name="q5" value="c" /> Steaming</label>
+            <div class="answer-feedback" id="fb5"></div>
+        </div>
+
+        <button class="submit-btn" onclick="submitQuiz()">Submit Answers</button>
+        <button class="submit-btn" id="retryBtn" onclick="resetQuiz()" style="display:none; margin-top:10px; background:#27ae60;">Try Again</button>
+
         <div class="result" id="result"></div>
     </div>
 </main>
 
 <footer>
-    <p>&copy; 2025 My Cooking Website | All rights reserved</p>
+    <p>&copy; 2025 Cooking with Zakaria. All rights reserved.</p>
 </footer>
 
 <script>
-    function submitQuiz() {
-        let score = 0;
-        const q1 = document.querySelector('input[name="q1"]:checked');
-        const q2 = document.querySelector('input[name="q2"]:checked');
-        const q3 = document.querySelector('input[name="q3"]:checked');
+    const answers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
 
-        if (!q1 || !q2 || !q3) {
-            const result = document.getElementById("result");
-            result.textContent = "Please answer all questions!";
-            result.style.color = "red";
+    const explanations = {
+        q1: 'Correct answer: Yogurt and spices — they tenderise the meat and add depth.',
+        q2: 'Correct answer: Butter, cream, and Parmesan cheese — the classic Alfredo trio.',
+        q3: 'Correct answer: Semolina flour — it gives Kesra its distinctive dense texture.',
+        q4: 'Correct answer: 75°C (165°F) — this ensures the chicken is safe to eat.',
+        q5: 'Correct answer: Baking / roasting — dry heat removes moisture for a crispy result.'
+    };
+
+    function submitQuiz() {
+        let allAnswered = true;
+
+        for (let i = 1; i <= 5; i++) {
+            if (!document.querySelector(`input[name="q${i}"]:checked`)) {
+                allAnswered = false;
+            }
+        }
+
+        if (!allAnswered) {
+            const result = document.getElementById('result');
+            result.textContent = 'Please answer all 5 questions before submitting!';
+            result.style.background = '#fde8e8';
+            result.style.color = '#b71c1c';
             return;
         }
 
-        if (q1.value === "a") score++;
-        if (q2.value === "a") score++;
-        if (q3.value === "a") score++;
+        let score = 0;
 
-        const result = document.getElementById("result");
-        result.textContent = `You scored ${score} out of 3!`;
-        result.style.color = "#4CAF50";
+        for (let i = 1; i <= 5; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            const fb = document.getElementById(`fb${i}`);
+            fb.style.display = 'block';
+
+            // Disable all radios for this question
+            document.querySelectorAll(`input[name="q${i}"]`).forEach(r => r.disabled = true);
+
+            if (selected.value === answers[`q${i}`]) {
+                score++;
+                fb.textContent = '✅ Correct! ' + explanations[`q${i}`];
+                fb.className = 'answer-feedback answer-correct';
+            } else {
+                fb.textContent = '❌ Wrong. ' + explanations[`q${i}`];
+                fb.className = 'answer-feedback answer-wrong';
+            }
+        }
+
+        const result = document.getElementById('result');
+        const pct = Math.round((score / 5) * 100);
+
+        if (score === 5) {
+            result.textContent = `🎉 Perfect score! ${score}/5 (${pct}%) — You're a kitchen master!`;
+            result.style.background = '#e8f5e9';
+            result.style.color = '#1a7a3c';
+        } else if (score >= 3) {
+            result.textContent = `👍 Good job! ${score}/5 (${pct}%) — Keep practising!`;
+            result.style.background = '#fff3e0';
+            result.style.color = '#e65100';
+        } else {
+            result.textContent = `📚 You scored ${score}/5 (${pct}%) — Check out our tips and try again!`;
+            result.style.background = '#fde8e8';
+            result.style.color = '#b71c1c';
+        }
+
+        document.querySelector('.submit-btn').style.display = 'none';
+        document.getElementById('retryBtn').style.display = 'inline-block';
+    }
+
+    function resetQuiz() {
+        for (let i = 1; i <= 5; i++) {
+            document.querySelectorAll(`input[name="q${i}"]`).forEach(r => {
+                r.disabled = false;
+                r.checked = false;
+            });
+            const fb = document.getElementById(`fb${i}`);
+            fb.textContent = '';
+            fb.style.display = 'none';
+            fb.className = 'answer-feedback';
+        }
+
+        const result = document.getElementById('result');
+        result.textContent = '';
+        result.style.background = '';
+        result.style.color = '';
+
+        document.querySelector('.submit-btn').style.display = 'block';
+        document.getElementById('retryBtn').style.display = 'none';
     }
 </script>
 
