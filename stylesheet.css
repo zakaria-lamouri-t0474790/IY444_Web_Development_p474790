@@ -1,173 +1,35 @@
-/*w3school(n.d*).general layout*/
+/* =====================================================
+   COOKING WITH ZAKARIA — UNIFIED STYLESHEET
+   ===================================================== */
+
+/* --- CSS Variables (Single Consistent Palette) --- */
 :root {
-    --carrot-orange: #e67e22;
-    --basil-green: #27ae60;
-    --cream-white: #fefae0;
-    --dark-brown: #4e342e;
-    --slate-gray: #7f8c8d;
-    --font-main: 'Segoe UI', sans-serif;
+    --orange:       #e67e22;
+    --orange-dark:  #c0601a;
+    --green:        #27ae60;
+    --green-dark:   #1e8449;
+    --cream:        #fefae0;
+    --brown-dark:   #4e342e;
+    --brown-mid:    #6b4226;
+    --gray:         #7f8c8d;
+    --gray-dark:    #37474f;
+    --white:        #ffffff;
+    --card-bg:      #fff9f0;
+    --border:       #d8a35d;
+    --font-main:    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* --- Reset & Base --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: var(--font-main);
-    background-color: var(--cream-white);
-    color: var(--dark-brown);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-
-header {
-    background-color: var(--carrot-orange);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-
-main {
-    padding: 20px;
-}
-
-h2, h3 {
-    color: var(--basil-green);
-}
-
-.intro, .about, .features, .cta, .gallery {
-    margin-bottom: 30px;
-}
-
-
-.banner {
-    display: block;
-    margin: 10px auto;
-    max-width: 10%;
-    height: auto;
-}
-
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.features article {
-    background: white;
-    padding: 15px;
-    border: 2px solid var(--basil-green);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-button {
-    background-color: var(--carrot-orange);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #d35400;
-}
-
-
-blockquote {
-    font-style: italic;
-    margin: 20px 0;
-    padding-left: 20px;
-    border-left: 4px solid var(--basil-green);
-    color: var(--slate-gray);
-}
-
-
-.gallery {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.gallery h3 {
-    color: var(--basil-green);
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.gallery p {
-    color: var(--slate-gray);
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.image-grid img {
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.image-grid img:hover {
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: var(--slate-gray);
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-}
-/*2 nd page*/
-/*w3school(n.d*).css grid layout module*/
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fefae0;
-    color: #333;
-}
-
-h1, h2, h3 {
-    color: #6b4226;
-    margin-bottom: 10px;
-}
-
-p {
+    background-color: var(--cream);
+    color: var(--brown-dark);
     line-height: 1.6;
 }
 
@@ -177,140 +39,335 @@ img {
     border-radius: 8px;
 }
 
+/* --- Header & Nav --- */
 header {
-    background-color: #ff8c42;
-    color: white;
-    padding: 20px 0;
+    background: linear-gradient(to right, var(--orange), #f5a623);
+    color: var(--white);
+    padding: 20px 0 15px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 4px;
+    padding: 0 10px;
 }
 
-nav li {
-    margin: 0 10px;
-}
-
-nav a {
+nav ul li a {
+    display: block;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: var(--white);
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: background 0.25s, color 0.25s;
 }
 
-nav a:hover {
-    color: #e0e0e0;
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: var(--white);
 }
 
+/* --- Main & Layout --- */
+main {
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--brown-dark);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--brown-mid);
+    margin-bottom: 10px;
+}
+
+p { line-height: 1.7; }
+
+/* --- Footer --- */
+footer {
+    background-color: var(--gray-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* --- Buttons --- */
+button,
+.btn {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 12px 22px;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.15s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--orange-dark);
+    transform: translateY(-1px);
+}
+
+/* ==============================================
+   HOME PAGE
+   ============================================== */
 
 .banner {
     display: block;
     margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    border: 5px solid #a3b18a;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border: 3px solid var(--border);
 }
 
-
-main {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.intro, .about, .features, .cta, .gallery {
+.intro {
+    text-align: center;
     margin-bottom: 40px;
 }
 
+.intro h2 { color: var(--green); font-size: 2rem; }
+
+.about {
+    background: var(--white);
+    padding: 20px 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--green);
+    margin-bottom: 40px;
+}
+
+.about p { margin-bottom: 12px; }
 
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    margin-bottom: 40px;
 }
 
 .features article {
-    background-color: #fff;
-    padding: 15px;
-    border-left: 5px solid #a3b18a; /* Basil green */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 6px;
+    background: var(--white);
+    padding: 20px;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-
-button {
-    background-color: #a3b18a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background-color 0.3s;
+.features article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
 }
 
-button:hover {
-    background-color: #6b8f71;
-}
+.features h3 { color: var(--green); }
 
+.cta {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
 blockquote {
     font-style: italic;
-    color: #6b4226;
-    border-left: 4px solid #ff8c42;
-    padding-left: 10px;
-    margin-top: 20px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border-left: 4px solid var(--orange);
+    color: var(--gray);
+    max-width: 600px;
+    text-align: left;
 }
 
-
-.gallery .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-}
-
-
-footer {
-    background-color: #333;
-    color: white;
+.gallery {
     text-align: center;
-    padding: 15px 0;
     margin-top: 40px;
 }
-/*3 page*/
-/*w3school(n.d*).how to-video gallery*/
+
+.gallery h3 { color: var(--green); font-size: 1.5rem; margin-bottom: 10px; }
+.gallery p  { color: var(--gray); margin-bottom: 20px; }
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.image-grid img {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover { transform: scale(1.04); }
+
+/* ==============================================
+   RECIPES PAGE
+   ============================================== */
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.recipe-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 280px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.recipe-card h3 {
+    margin: 15px 0 8px;
+    color: var(--orange-dark);
+}
+
+.recipe-card p {
+    padding: 0 15px 10px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.view-recipe-btn {
+    display: inline-block;
+    margin-bottom: 16px;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 9px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.25s, transform 0.15s;
+    cursor: pointer;
+    border: none;
+    font-family: var(--font-main);
+}
+
+.view-recipe-btn:hover {
+    background-color: var(--orange-dark);
+    transform: translateY(-2px);
+}
+
+/* Recipe Modal */
+.recipe-modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-modal-overlay.open {
+    display: flex;
+}
+
+.recipe-modal {
+    background: var(--white);
+    border-radius: 14px;
+    max-width: 780px;
+    width: 92%;
+    padding: 28px;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.recipe-modal video {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 14px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px; right: 16px;
+    background: var(--orange);
+    border: none;
+    color: var(--white);
+    font-size: 1.4rem;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+}
+
+.modal-close:hover { background: var(--orange-dark); }
+
+/* ==============================================
+   VIDEOS PAGE
+   ============================================== */
+
 .video-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5px;
-    padding: 5px;
+    gap: 20px;
+    padding: 10px 0;
 }
 
 .video-card {
-    background-color: #fff9f0;
-    border: 2px solid #d8a35d;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border);
     border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .video-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .video-card h3 {
-    color: #6b4226;
-    font-size: 1.2rem;
+    color: var(--brown-mid);
+    font-size: 1.1rem;
     margin-bottom: 12px;
     text-align: center;
 }
@@ -318,109 +375,40 @@ footer {
 .video-card video {
     width: 100%;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    display: block;
 }
 
-
-nav a.active {
-    background-color: #ffefcf;
-    color: #6b4226;
-    border-radius: 6px;
-    padding: 6px 10px;
-}
-
-/*4th page*/
-/*w3school(n.d*).how to-cards*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #fffdf7;
-    color: #333;
-    line-height: 1.6;
-}
-
-
-header {
-    background: linear-gradient(to right, #f57c00, #fbc02d);
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    padding: 10px 16px;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 20px;
-    transition: background 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: #8bc34a;
-}
-
-
-main {
-    padding: 50px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-main h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #4e342e;
-    margin-bottom: 40px;
-}
-
+/* ==============================================
+   TIPS PAGE
+   ============================================== */
 
 .tips-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 25px;
+    margin-top: 20px;
 }
 
-
 .tip-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-left: 6px solid #f57c00; /* orange accent bar */
+    background-color: var(--white);
+    border: 1px solid #e0d6cc;
+    border-left: 6px solid var(--orange);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .tip-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.1);
 }
 
 .tip-card h3 {
-    margin-bottom: 10px;
-    color: #d84315; /* deeper orange */
-    font-size: 1.2rem;
+    color: var(--orange-dark);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
 }
 
 .tip-card p {
@@ -428,26 +416,18 @@ main h2 {
     font-size: 0.95rem;
 }
 
+/* ==============================================
+   ABOUT PAGE
+   ============================================== */
 
-footer {
-    background-color: #37474f; /* slate gray */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    margin-top: 60px;
-}
-
-/*5th pge*/
-/*w3school(n.d*).how to-profile cards*/
-.about-content{
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 25px;
-    background-color: #fff9f0;
-    border: 2px solid #d8a35d;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.about-content {
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     text-align: center;
 }
 
@@ -457,121 +437,146 @@ footer {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 3px solid #6b4226;
+    border: 4px solid var(--brown-mid);
 }
 
 .about-content p {
     font-size: 1rem;
-    line-height: 1.7;
-    color: #333;
-    margin-bottom: 20px;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 16px;
 }
 
-.about-content em {
-    font-style: italic;
-    color: #6b4226;
-}
+.about-content em { color: var(--brown-mid); }
 
-.social-links {
-    margin-top: 20px;
-}
+.social-links { margin-top: 20px; }
 
 .social-links a {
     text-decoration: none;
-    color: #d86f2b;
+    color: var(--orange);
     font-weight: bold;
     margin: 0 8px;
-    transition: color 0.3s;
+    transition: color 0.25s;
 }
 
-.social-links a:hover {
-    color: #a64512;
-}
+.social-links a:hover { color: var(--orange-dark); }
 
+/* ==============================================
+   QUIZ PAGE
+   ============================================== */
 
-nav a.active {
-    background-color: #ffefcf;
-    color: #6b4226;
-    border-radius: 6px;
-    padding: 6px 10px;
-}
-/*6th page*/
 .quiz-container {
-    max-width: 700px;
-    margin: 50px auto;
-    background: #fffdf7;
-    border-left: 6px solid #f57c00;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-width: 680px;
+    margin: 36px auto;
+    background: var(--card-bg);
+    border-left: 6px solid var(--orange);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
 }
 
-.quiz-container .question {
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+.quiz-container h2 {
+    text-align: center;
+    color: var(--brown-dark);
+    margin-bottom: 24px;
 }
 
-.quiz-container .question p {
-    font-size: 1.1rem;
+.question {
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e8e0d8;
+}
+
+.question p {
+    font-size: 1.05rem;
     font-weight: 600;
-    color: #4e342e;
-    margin-bottom: 10px;
+    color: var(--brown-dark);
+    margin-bottom: 12px;
 }
 
-.quiz-container input[type="radio"] {
-    margin-right: 8px;
-    transform: scale(1.1);
+.question label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.97rem;
+    color: #444;
+    margin-bottom: 8px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.15s;
 }
 
-.quiz-container label {
-    font-size: 1rem;
-    color: #333;
+.question label:hover { background: rgba(230,126,34,0.08); }
+
+.question input[type="radio"] {
+    accent-color: var(--orange);
+    width: 16px; height: 16px;
+    flex-shrink: 0;
+}
+
+.quiz-container .submit-btn {
     display: block;
-    margin-bottom: 6px;
-}
-
-.quiz-container button {
-    background-color: #f57c00;
-    color: #fff;
-    padding: 12px 25px;
+    width: 100%;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 13px;
     border: none;
     font-size: 1rem;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-family: var(--font-main);
+    transition: background-color 0.25s;
 }
 
-.quiz-container button:hover {
-    background-color: #e65100;
-}
+.quiz-container .submit-btn:hover { background-color: var(--orange-dark); }
 
 .result {
-    margin-top: 20px;
-    font-size: 1.2rem;
+    margin-top: 24px;
+    font-size: 1.15rem;
     font-weight: bold;
     text-align: center;
-}/*last page*/
+    padding: 16px;
+    border-radius: 8px;
+}
+
+/* Answer feedback */
+.answer-feedback {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.answer-correct   { color: #1a7a3c; background: #e8f5e9; border-left: 3px solid #27ae60; }
+.answer-wrong     { color: #b71c1c; background: #fde8e8; border-left: 3px solid #e53935; }
+.answer-missed    { color: #555; background: #fff3e0; border-left: 3px solid var(--orange); }
+
+/* ==============================================
+   CONTACT PAGE
+   ============================================== */
 
 .contact-form {
     max-width: 600px;
     margin: 40px auto;
-    background-color: #fffdf7;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #f57c00;
+    background-color: var(--card-bg);
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    border-left: 5px solid var(--orange);
 }
 
-.contact-form p {
-    font-size: 1.1rem;
-    color: #4e342e;
-    margin-bottom: 20px;
+.contact-form > p {
+    font-size: 1.05rem;
+    color: var(--brown-dark);
+    margin-bottom: 22px;
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #2e2e2e;
     font-weight: 600;
 }
@@ -583,28 +588,73 @@ nav a.active {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-size: 1rem;
-    transition: border 0.3s ease;
+    font-family: var(--font-main);
+    transition: border-color 0.25s, box-shadow 0.25s;
+    background: var(--white);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #f57c00;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(230,126,34,0.15);
     outline: none;
 }
 
-.contact-form button {
-    background-color: #43a047;
-    color: #fff;
-    padding: 12px 24px;
+.contact-form input.error,
+.contact-form textarea.error {
+    border-color: #e53935;
+}
+
+.field-error {
+    color: #e53935;
+    font-size: 0.85rem;
+    margin-top: -14px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.contact-form .submit-btn {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 13px 26px;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
+    font-family: var(--font-main);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.25s, transform 0.15s;
 }
 
-.contact-form button:hover {
-    background-color: #388e3c;
+.contact-form .submit-btn:hover {
+    background-color: var(--green-dark);
+    transform: translateY(-1px);
+}
+
+.success-message {
+    display: none;
+    background: #e8f5e9;
+    color: #1a7a3c;
+    border: 1px solid #27ae60;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ==============================================
+   RESPONSIVE
+   ============================================== */
+
+@media (max-width: 600px) {
+    header h1 { font-size: 1.4rem; }
+    nav ul li a { padding: 5px 10px; font-size: 0.9rem; }
+    main { padding: 20px 14px; }
+    .recipe-card { width: 90%; }
+    .banner { width: 100%; }
+    .quiz-container { padding: 20px 16px; }
+    .contact-form { padding: 22px 16px; }
 }
